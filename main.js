@@ -71,6 +71,43 @@ function closeMenu() {
     document.body.classList.remove('menu-expanded')
 }
 
+function colore() {
+    var color1 = document.getElementsByClassName("ativa-color1");
+    var color2 = document.getElementsByClassName("ativa-color2");
+    var color3 = document.getElementsByClassName("ativa-color3");
+    var dark = document.getElementsByClassName("ativa-dark");
+
+
+    if (color1[0].checked == true) {
+        document.getElementsByClassName("color1")[0].style.visibility = "visible";
+        document.getElementsByClassName("color2")[0].style.visibility = "hidden";
+        document.getElementsByClassName("color3")[0].style.visibility = "hidden";
+        document.getElementsByClassName("dark")[0].style.visibility = "hidden";
+    } else if (color2[0].checked == true) {
+        document.getElementsByClassName("color1")[0].style.visibility = "hidden";
+        document.getElementsByClassName("color2")[0].style.visibility = "visible";
+        document.getElementsByClassName("color3")[0].style.visibility = "hidden";
+        document.getElementsByClassName("dark")[0].style.visibility = "hidden";
+    } else if (color3[0].checked == true) {
+        document.getElementsByClassName("color1")[0].style.visibility = "hidden";
+        document.getElementsByClassName("color2")[0].style.visibility = "hidden";
+        document.getElementsByClassName("color3")[0].style.visibility = "visible";
+        document.getElementsByClassName("dark")[0].style.visibility = "hidden";
+    } else if (dark[0].checked == true) {
+        document.getElementsByClassName("color1")[0].style.visibility = "hidden";
+        document.getElementsByClassName("color2")[0].style.visibility = "hidden";
+        document.getElementsByClassName("color3")[0].style.visibility = "hidden";
+        document.getElementsByClassName("dark")[0].style.visibility = "visible";
+    } else {
+        document.getElementsByClassName("color1")[0].style.visibility = "visible";
+        document.getElementsByClassName("color2")[0].style.visibility = "visible";
+        document.getElementsByClassName("color3")[0].style.visibility = "visible";
+        document.getElementsByClassName("dark")[0].style.visibility = "visible";
+    }
+}
+
+
+
 ScrollReveal({
     origin: 'top',
     distance: '30px',
